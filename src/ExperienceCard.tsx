@@ -13,7 +13,7 @@ const ExperienceCard: FC<Props> = ({ company, title, li1, li2, li3, logo }) => {
   return (
     <div className="h-[400px] border-4 border-[#E9D5CE] mx-2 rounded-2xl">
       <div className="flex">
-        <div className={`flex-2 mt-5 ml-5 w-[70px] ${logo}`} />
+        <div className={`flex-2 mt-5 ml-5 w-[70px] h-[67px] ${logo}`} />
         <div className="flex flex-1 flex-col ml-8">
           <p className="flex-1 font-Aspekta font-bold text-[#977A71] mt-6 text-2xl">
             {company}

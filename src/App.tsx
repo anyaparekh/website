@@ -34,28 +34,28 @@ const items = [
     logo="bg-[url('../public/h4i.png')]"
   />,
   <ExperienceCard
-    company="Hack4Impact"
-    title="Software Developer"
+    company="Society of Women Engineers"
+    title="Team Tech Co-Director"
     li1="hello"
     li2="hello"
     li3="hello"
-    logo="bg-[url('../public/h4i.png')]"
+    logo="bg-[url('../public/swe.png')]"
   />,
   <ExperienceCard
-    company="Hack4Impact"
+    company="Blue Cloak"
     title="Software Developer"
     li1="hello"
     li2="hello"
     li3="hello"
-    logo="bg-[url('../public/h4i.png')]"
+    logo="bg-[url('../public/blue-cloak.png')]"
   />,
   <ExperienceCard
-    company="Hack4Impact"
-    title="Software Developer"
+    company="George Mason University"
+    title="Research Intern"
     li1="hello"
     li2="hello"
     li3="hello"
-    logo="bg-[url('../public/h4i.png')]"
+    logo="bg-[url('../public/gmu.png')]"
   />,
 ];
 
