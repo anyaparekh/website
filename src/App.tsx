@@ -3,6 +3,8 @@ import headshot from "./headshot.png";
 import aspekta from "./fonts/Aspekta-550.woff2";
 import poppins from "./fonts/Poppins-Light.woff2";
 import { Font } from "@react-pdf/renderer";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 
 Font.register({
   family: "Aspekta",
@@ -13,6 +15,29 @@ Font.register({
   family: "Poppins",
   src: poppins,
 });
+
+const items = [
+  <div className="h-[400px] border-4 border-[#977A71] mx-2"></div>,
+  <div className="h-[400px] border-4 border-[#977A71] mx-2"></div>,
+  <div className="h-[400px] border-4 border-[#977A71] mx-2"></div>,
+  <div className="h-[400px] border-4 border-[#977A71] mx-2"></div>,
+  <div className="h-[400px] border-4 border-[#977A71] mx-2"></div>,
+];
+
+const responsive = {
+  0: {
+    items: 1,
+    itemsFit: "contain",
+  },
+  568: {
+    items: 2,
+    itemsFit: "contain",
+  },
+  1024: {
+    items: 3,
+    itemsFit: "contain",
+  },
+};
 
 export default function App() {
   return (
@@ -71,7 +96,16 @@ export default function App() {
             </div>
           </div>
         </div>
-        <div className="mt-10 w-full h-[380px] bg-[#E9D5CE]/[0.41] z-10 rounded-2xl mb-10"></div>
+        <div className="mt-10 w-full h-[500px] bg-[#E9D5CE]/[0.41] z-10 rounded-2xl mb-10">
+          <div className="p-5 w-full h-full justify-center items-center self-center">
+            <AliceCarousel
+              mouseTracking={true}
+              disableButtonsControls={true}
+              items={items}
+              responsive={responsive}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

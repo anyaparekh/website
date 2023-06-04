@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.alice-carousel__dots-item.__active {
+  @apply bg-[#977A71]/[0.8] !important;
+}
+
+.alice-carousel__dots-item {
+  @apply bg-[#977A71]/[0.2] bg-opacity-30 !important;
+}
