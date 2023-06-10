@@ -144,6 +144,9 @@ export default function App() {
           />
         </div>
         {/* </div> */}
+        <p className="mt-14 self-center font-Aspekta font-medium text-3xl text-[#473931]">
+          Projects
+        </p>
       </div>
     </div>
   );
