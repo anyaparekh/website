@@ -1,8 +1,10 @@
-import React from "react";
 import headshot from "./headshot.png";
 import aspekta from "./fonts/Aspekta-550.woff2";
 import poppins from "./fonts/Poppins-Light.woff2";
 import { Font } from "@react-pdf/renderer";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import ExperienceCard from "./ExperienceCard";
 
 Font.register({
   family: "Aspekta",
@@ -13,6 +15,64 @@ Font.register({
   family: "Poppins",
   src: poppins,
 });
+
+const items = [
+  <ExperienceCard
+    company="Viget"
+    title="Application Developer Intern"
+    li1="hello"
+    li2="hello"
+    li3="hello"
+    logo="bg-[url('../public/viget.png')]"
+  />,
+  <ExperienceCard
+    company="Hack4Impact"
+    title="Software Developer"
+    li1="hello"
+    li2="hello"
+    li3="hello"
+    logo="bg-[url('../public/h4i.png')]"
+  />,
+  <ExperienceCard
+    company="Society of Women Engineers"
+    title="Team Tech Co-Director"
+    li1="hello"
+    li2="hello"
+    li3="hello"
+    logo="bg-[url('../public/swe.png')]"
+  />,
+  <ExperienceCard
+    company="Blue Cloak"
+    title="Software Developer"
+    li1="hello"
+    li2="hello"
+    li3="hello"
+    logo="bg-[url('../public/blue-cloak.png')]"
+  />,
+  <ExperienceCard
+    company="George Mason University"
+    title="Research Intern"
+    li1="hello"
+    li2="hello"
+    li3="hello"
+    logo="bg-[url('../public/gmu.png')]"
+  />,
+];
+
+const responsive = {
+  0: {
+    items: 1,
+    itemsFit: "contain",
+  },
+  568: {
+    items: 2,
+    itemsFit: "contain",
+  },
+  1024: {
+    items: 3,
+    itemsFit: "contain",
+  },
+};
 
 export default function App() {
   return (
@@ -71,7 +131,22 @@ export default function App() {
             </div>
           </div>
         </div>
-        <div className="mt-10 w-full h-[380px] bg-[#E9D5CE]/[0.41] z-10 rounded-2xl mb-10"></div>
+        <p className="mt-14 self-center font-Aspekta font-medium text-3xl text-[#473931]">
+          Experience
+        </p>
+        {/* <div className="mt-8 w-full h-[500px] bg-[#E9D5CE]/[0.41] z-10 rounded-2xl mb-10"> */}
+        <div className="mt-4 p-5 w-full h-full justify-center items-center self-center">
+          <AliceCarousel
+            mouseTracking={true}
+            disableButtonsControls={true}
+            items={items}
+            responsive={responsive}
+          />
+        </div>
+        {/* </div> */}
+        <p className="mt-14 self-center font-Aspekta font-medium text-3xl text-[#473931]">
+          Projects
+        </p>
       </div>
     </div>
   );
