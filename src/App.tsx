@@ -259,6 +259,19 @@ export default function App() {
             </div>
           </div>
         </div>
+        <p className="mt-14 self-center font-Aspekta font-medium text-3xl text-[#473931]">
+          Experience
+        </p>
+        {/* <div className="mt-8 w-full h-[500px] bg-[#E9D5CE]/[0.41] z-10 rounded-2xl mb-10"> */}
+        <div className="mt-4 p-5 w-full h-full justify-center items-center self-center">
+          <AliceCarousel
+            mouseTracking={true}
+            disableButtonsControls={true}
+            items={items}
+            responsive={responsive}
+          />
+        </div>
+        {/* </div> */}
       </div>
     </>
   );
