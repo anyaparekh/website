@@ -1,10 +1,13 @@
 import headshot from "./headshot.png";
+import timely from "./projects/timely.png";
+import ocf from "./projects/ocf.png";
 import aspekta from "./fonts/Aspekta-550.woff2";
 import poppins from "./fonts/Poppins-Light.woff2";
 import { Font } from "@react-pdf/renderer";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import ExperienceCard from "./ExperienceCard";
+import ProjectCard from "./ProjectCard";
 
 Font.register({
   family: "Aspekta",
@@ -165,12 +168,42 @@ export default function App() {
             <p className="mt-8 self-center font-Aspekta font-medium text-3xl text-[#473931] mb-8">
               Projects
             </p>
-            <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 px-5 mb-6">
-              <div className="m-2 h-96 bg-[#977A71]"></div>
-              <div className="m-2 h-96 bg-[#977A71]"></div>
-              <div className="m-2 h-96 bg-[#977A71]"></div>
-              <div className="m-2 h-96 bg-[#977A71]"></div>
-              <div className="m-2 h-96 bg-[#977A71]"></div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 px-5 mb-6">
+              <ProjectCard
+                picture={timely}
+                title="Timely"
+                logo="bg-[url('../public/link.svg')]"
+                link="https://meettimely.com"
+                skills={["React Native", "Firebase", "Expo Go"]}
+              />
+              <ProjectCard
+                picture={ocf}
+                title="Open Climate Fix"
+                logo="bg-[url('../public/github2.svg')]"
+                link="https://github.com/openclimatefix/pv-sites-mobile"
+                skills={["TypeScript", "JavaScript", "CSS"]}
+              />
+              <ProjectCard
+                picture={timely}
+                title="Timely"
+                logo="bg-[url('../public/link.svg')]"
+                link="https://meettimely.com"
+                skills={["React Native", "Firebase", "Expo Go"]}
+              />
+              <ProjectCard
+                picture={timely}
+                title="Timely"
+                logo="bg-[url('../public/link.svg')]"
+                link="https://meettimely.com"
+                skills={["React Native", "Firebase", "Expo Go"]}
+              />
+              <ProjectCard
+                picture={timely}
+                title="Timely"
+                logo="bg-[url('../public/link.svg')]"
+                link="https://meettimely.com"
+                skills={["React Native", "Firebase", "Expo Go"]}
+              />
             </div>
           </div>
         </div>
