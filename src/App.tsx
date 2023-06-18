@@ -1,6 +1,9 @@
 import headshot from "./headshot.png";
 import timely from "./projects/timely.png";
 import ocf from "./projects/ocf.png";
+import kada from "./projects/kada.png";
+import memory from "./projects/memory.jpg";
+import allergy from "./projects/allergy.jpg";
 import aspekta from "./fonts/Aspekta-550.woff2";
 import poppins from "./fonts/Poppins-Light.woff2";
 import { Font } from "@react-pdf/renderer";
@@ -37,16 +40,8 @@ const items = [
     logo="bg-[url('../public/h4i.png')]"
   />,
   <ExperienceCard
-    company="Society of Women Engineers"
-    title="Team Tech Co-Director"
-    li1="hello"
-    li2="hello"
-    li3="hello"
-    logo="bg-[url('../public/swe.png')]"
-  />,
-  <ExperienceCard
     company="Blue Cloak"
-    title="Software Developer"
+    title="Software Developer Intern"
     li1="hello"
     li2="hello"
     li3="hello"
@@ -80,7 +75,7 @@ const responsive = {
 const scrollUp = () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth", // for smoothly scrolling
+    behavior: "smooth",
   });
 };
 
@@ -89,7 +84,7 @@ export default function App() {
     <>
       <div
         onClick={scrollUp}
-        className="w-[45px] h-[45px] bg-[url('../public/up.svg')] bottom-[80px] right-[65px] fixed rounded-2xl shadow-md"
+        className="w-[45px] h-[45px] bg-[url('../public/up.svg')] bottom-[80px] right-[65px] fixed rounded-2xl shadow-md md:visible z-3"
       />
       <div className="flex justify-center">
         <div className="flex flex-col items-center self-center md:w-9/12 w-full h-full bg-[#ffe4e4]/[0.8]">
@@ -154,7 +149,6 @@ export default function App() {
           <p className="mt-14 self-center font-Aspekta font-medium text-3xl text-[#473931]">
             Experience
           </p>
-          {/* <div className="mt-8 w-full h-[500px] bg-[#E9D5CE]/[0.41] z-10 rounded-2xl mb-10"> */}
           <div className="mt-4 p-5 w-full h-full justify-center items-center self-center">
             <AliceCarousel
               mouseTracking={true}
@@ -163,7 +157,6 @@ export default function App() {
               responsive={responsive}
             />
           </div>
-          {/* </div> */}
           <div className="flex flex-col mt-3 w-full h-full bg-[#E9D5CE]/[0.41] z-10 rounded-2xl mb-10">
             <p className="mt-8 self-center font-Aspekta font-medium text-3xl text-[#473931] mb-8">
               Projects
@@ -184,25 +177,25 @@ export default function App() {
                 skills={["TypeScript", "JavaScript", "CSS"]}
               />
               <ProjectCard
-                picture={timely}
-                title="Timely"
+                picture={kada}
+                title="KadaKareer"
                 logo="bg-[url('../public/link.svg')]"
-                link="https://meettimely.com"
-                skills={["React Native", "Firebase", "Expo Go"]}
+                link="https://app.kadakareer.com/"
+                skills={["React", "NestJS", "Firebase"]}
               />
               <ProjectCard
-                picture={timely}
-                title="Timely"
-                logo="bg-[url('../public/link.svg')]"
-                link="https://meettimely.com"
-                skills={["React Native", "Firebase", "Expo Go"]}
+                picture={allergy}
+                title="Indian Food Allergy Classifier"
+                logo="bg-[url('../public/github2.svg')]"
+                link="https://github.com/anyaparekh/indian-food-allergy-tester"
+                skills={["Android Studio", "TFLite Model Maker"]}
               />
               <ProjectCard
-                picture={timely}
-                title="Timely"
-                logo="bg-[url('../public/link.svg')]"
-                link="https://meettimely.com"
-                skills={["React Native", "Firebase", "Expo Go"]}
+                picture={memory}
+                title="Memory Game"
+                logo="bg-[url('../public/github2.svg')]"
+                link="https://github.com/anyaparekh/memorygame"
+                skills={["Android Studio"]}
               />
             </div>
           </div>
