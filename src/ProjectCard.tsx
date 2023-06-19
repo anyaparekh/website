@@ -33,10 +33,6 @@ const ProjectCard: FC<Props> = ({ picture, title, link, logo, skills }) => {
           href={link}
           className={`w-[24px] h-[24px] ${logo} float-right mr-5 mb-5`}
         />
-        {/* <a
-                    href="https://github.com/anyaparekh/"
-                    className="w-[24px] h-[24px] bg-[url('../public/github2.svg')] float-right mt-5"
-                  /> */}
       </div>
     </div>
   );

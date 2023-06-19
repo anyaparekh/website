@@ -26,34 +26,80 @@ const items = [
   <ExperienceCard
     company="Viget"
     title="Application Developer Intern"
-    li1="hello"
-    li2="hello"
-    li3="hello"
+    listitems={["hello", "hello", "hello"]}
     logo="bg-[url('../public/viget.png')]"
+    date="2023 - Present"
   />,
   <ExperienceCard
     company="Hack4Impact"
     title="Software Developer"
-    li1="hello"
-    li2="hello"
-    li3="hello"
+    listitems={[
+      <p>
+        Co-developed a web application for
+        <a
+          href="https://openclimatefix.org/"
+          className="text-[#473931] font-semibold"
+        >
+          {" "}
+          Open Climate Fix
+        </a>
+        , allowing users to forecast their total solar power output
+      </p>,
+      <p>
+        Collaborated to build a virtual apprenticeship platform for{" "}
+        <a
+          href="https://www.kadakareer.com/"
+          className="text-[#473931] font-semibold"
+        >
+          KadaKareer
+        </a>
+        , a non-profit helping Filipino students
+      </p>,
+    ]}
     logo="bg-[url('../public/h4i.png')]"
+    date="2022 - Present"
   />,
   <ExperienceCard
     company="Blue Cloak"
     title="Software Developer Intern"
-    li1="hello"
-    li2="hello"
-    li3="hello"
+    listitems={[
+      "Co-developed a cyber range orchestration platform that enables cyber training exercises and hosts virtual networks",
+      "Expanded the map editor to better visualize network infrastructures",
+      "Created unit and validation test scripts using Python to test and debug each platform component",
+    ]}
     logo="bg-[url('../public/blue-cloak.png')]"
+    date="2019, 2021"
   />,
   <ExperienceCard
     company="George Mason University"
     title="Research Intern"
-    li1="hello"
-    li2="hello"
-    li3="hello"
+    listitems={[
+      <p>
+        Worked with Professor Thomas LaToza to identify{" "}
+        <a
+          href="https://journals.gmu.edu/index.php/jssr/article/view/3223"
+          className="text-[#473931] font-semibold"
+        >
+          best practices for hyperparameter optimization.
+        </a>
+      </p>,
+      <p>
+        Worked with Professor Gheorghe Tecuci to develop analyses for
+        sInvestigator, an AI based cognitive assistant
+      </p>,
+      <p>
+        Work published in the GMU's 2020{" "}
+        <a
+          href="https://journals.gmu.edu/index.php/ITLCP/article/view/2801"
+          className="text-[#473931] font-semibold"
+        >
+          “Teaching Towards the Future”{" "}
+        </a>
+        journal
+      </p>,
+    ]}
     logo="bg-[url('../public/gmu.png')]"
+    date="2018, 2020"
   />,
 ];
 
@@ -84,12 +130,12 @@ export default function App() {
     <>
       <div
         onClick={scrollUp}
-        className="w-[45px] h-[45px] bg-[url('../public/up.svg')] bottom-[80px] right-[65px] fixed rounded-2xl shadow-md md:visible z-3"
+        className="hidden md:block w-[45px] h-[45px] bg-[url('../public/up.svg')] bottom-[80px] right-[65px] fixed rounded-2xl shadow-md"
       />
       <div className="flex justify-center">
         <div className="flex flex-col items-center self-center md:w-9/12 w-full h-full bg-[#ffe4e4]/[0.8]">
           <div className="mt-7 w-[44px] h-[29px] bg-[url('../public/logo.svg')]" />
-          <div className="md:pt-5 w-full overflow-hidden">
+          <div className="pt-5 w-full overflow-hidden">
             <div className="flex flex-row mt-3 md:h-[360px] h-[380px] bg-[#E9D5CE]/[0.41] z-10 rounded-2xl">
               <div className="flex-1 flex flex-col relative">
                 <div className="md:ml-16 ml-8 mr-5 flex-2">
