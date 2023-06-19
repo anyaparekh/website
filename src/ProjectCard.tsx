@@ -3,8 +3,8 @@ import { FC } from "react";
 interface Props {
   picture: string;
   title: string;
-  link: string; //
-  logo: string; // bg-[url('../public/link.svg')]
+  link: string;
+  logo: string;
   skills: string[];
 }
 

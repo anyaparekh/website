@@ -130,7 +130,7 @@ export default function App() {
     <>
       <div
         onClick={scrollUp}
-        className="hidden md:block w-[45px] h-[45px] bg-[url('../public/up.svg')] bottom-[80px] right-[65px] fixed rounded-2xl shadow-md"
+        className="hidden md:block w-[45px] h-[45px] bg-[url('../public/up.svg')] bottom-[80px] right-[65px] fixed rounded-2xl shadow-md hover:cursor-pointer"
       />
       <div className="flex justify-center">
         <div className="flex flex-col items-center self-center md:w-9/12 w-full h-full bg-[#ffe4e4]/[0.8]">
