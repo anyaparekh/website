@@ -25,13 +25,18 @@ Font.register({
 const items = [
   <ExperienceCard
     company="Viget"
+    companyLink="https://www.viget.com/"
     title="Application Developer Intern"
-    listitems={["hello", "hello", "hello"]}
+    listitems={[
+      "Collaborating with other designers and developers to create an application that empowers young adults to explore their area solo by following day capsules created and posted by other users",
+      "Developing numerous web applications using the Ruby on Rails framework",
+    ]}
     logo="bg-[url('../public/viget.png')]"
     date="2023 - Present"
   />,
   <ExperienceCard
     company="Hack4Impact"
+    companyLink="https://uiuc.hack4impact.org/"
     title="Software Developer"
     listitems={[
       <p>
@@ -61,6 +66,7 @@ const items = [
   />,
   <ExperienceCard
     company="Blue Cloak"
+    companyLink="https://www.blue-cloak.com/"
     title="Software Developer Intern"
     listitems={[
       "Co-developed a cyber range orchestration platform that enables cyber training exercises and hosts virtual networks",
@@ -72,6 +78,7 @@ const items = [
   />,
   <ExperienceCard
     company="George Mason University"
+    companyLink="https://www.gmu.edu/"
     title="Research Intern"
     listitems={[
       <p>
@@ -143,9 +150,9 @@ export default function App() {
                     Hey, I'm Anya!
                   </p>
                   <p className="mb-5 mt-8 font-Poppins text-base text-[#473931]/[0.6]">
-                    I am studying Computer Science at UIUC and love to make cool
-                    things. I'm mainly interested in AI/ML and full-stack
-                    development. <br />
+                    I am studying Computer Science at UIUC and love to develop
+                    innovative and impactful applications. I'm mainly interested
+                    in AI/ML and full-stack development. <br />
                     <br />
                     Currently, I am an Application Developer intern at{" "}
                     <a
@@ -174,11 +181,17 @@ export default function App() {
                   </a>
                   <a
                     href="https://www.linkedin.com/in/anya-parekh/"
-                    className="mt-10 w-[24px] h-[24px] absolute bottom-10 right-6 bg-[url('../public/linkedin.svg')]"
+                    className="mt-10 w-[24px] h-[24px] absolute bottom-10 right-[12px] bg-[url('../public/linkedin.svg')]"
                   />
                   <a
                     href="https://github.com/anyaparekh/"
-                    className="mt-10 w-[24px] h-[24px] absolute bottom-10 right-16 bg-[url('../public/github.svg')]"
+                    className="mt-10 w-[24px] h-[24px] absolute bottom-10 right-[52px] bg-[url('../public/github.svg')]"
+                  />
+                  <a
+                    href="Anya_Parekh_Resume.pdf"
+                    download="Anya_Parekh_Resume"
+                    target="_blank"
+                    className="mt-10 w-[24px] h-[24px] absolute bottom-10 right-[92px] bg-[url('../public/resume.svg')]"
                   />
                 </div>
               </div>
@@ -220,7 +233,7 @@ export default function App() {
                 title="Open Climate Fix"
                 logo="bg-[url('../public/github2.svg')]"
                 link="https://github.com/openclimatefix/pv-sites-mobile"
-                skills={["TypeScript", "JavaScript", "CSS"]}
+                skills={["NextJS", "TypeScript", "Auth0"]}
               />
               <ProjectCard
                 picture={kada}
