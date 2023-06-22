@@ -1,7 +1,6 @@
 {
   "name": "website",
   "version": "0.1.0",
-  "homepage": "https://anyaparekh.github.io/anyaparekh.github.io",
   "private": true,
   "dependencies": {
     "@react-pdf/renderer": "^3.1.11",
