@@ -10,7 +10,7 @@ interface Props {
 
 const ProjectCard: FC<Props> = ({ picture, title, link, logo, skills }) => {
   return (
-    <div className="m-2 h-fit bg-[#977A71] flex flex-col">
+    <div className="m-4 h-fit bg-[#977A71] flex flex-col rounded-2xl">
       <div className="flex px-5 py-4">
         <img
           className="flex-1 border-[#ffe4e4]/[0.8] border-4 self-center"
