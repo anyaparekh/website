@@ -1,4 +1,5 @@
 import headshot from "./headshot.png";
+import soli from "./projects/soli.png";
 import timely from "./projects/timely.png";
 import ocf from "./projects/ocf.png";
 import kada from "./projects/kada.png";
@@ -28,7 +29,17 @@ const items = [
     companyLink="https://www.viget.com/"
     title="Application Developer Intern"
     listitems={[
-      "Collaborating with other designers and developers to create an application that empowers young adults to explore their area solo by following day capsules created and posted by other users",
+      <p>
+        Collaborating with other designers and developers to create{" "}
+        <a
+          href="https://linktr.ee/soli2023"
+          className="text-[#473931] font-semibold"
+        >
+          Soli
+        </a>
+        , an application that empowers young adults to explore their area solo
+        by guides posted by other users
+      </p>,
       "Developing numerous web applications using the Ruby on Rails framework",
     ]}
     logo="bg-[url('../public/viget.png')]"
@@ -222,6 +233,13 @@ export default function App() {
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 px-5 mb-6">
               <ProjectCard
+                picture={soli}
+                title="Soli"
+                logo="bg-[url('../public/github2.svg')]"
+                link="https://github.com/vigetlabs/soli"
+                skills={["Ruby on Rails", "Ruby", "Postgres"]}
+              />
+              <ProjectCard
                 picture={timely}
                 title="Timely"
                 logo="bg-[url('../public/link.svg')]"
@@ -259,19 +277,6 @@ export default function App() {
             </div>
           </div>
         </div>
-        <p className="mt-14 self-center font-Aspekta font-medium text-3xl text-[#473931]">
-          Experience
-        </p>
-        {/* <div className="mt-8 w-full h-[500px] bg-[#E9D5CE]/[0.41] z-10 rounded-2xl mb-10"> */}
-        <div className="mt-4 p-5 w-full h-full justify-center items-center self-center">
-          <AliceCarousel
-            mouseTracking={true}
-            disableButtonsControls={true}
-            items={items}
-            responsive={responsive}
-          />
-        </div>
-        {/* </div> */}
       </div>
     </>
   );
