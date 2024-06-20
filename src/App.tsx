@@ -1,4 +1,6 @@
 import headshot from "./headshot.png";
+import fosternation from "./projects/fosternation.png";
+import ethicsnet from "./projects/ethicsnet.png";
 import soli from "./projects/soli.png";
 import timely from "./projects/timely.png";
 import ocf from "./projects/ocf.png";
@@ -25,31 +27,44 @@ Font.register({
 
 const items = [
   <ExperienceCard
-    company="Viget"
-    companyLink="https://www.viget.com/"
-    title="Application Developer Intern"
+    company="Microsoft"
+    companyLink="https://azure.microsoft.com/en-us/products/data-factory"
+    title="Software Engineer Intern"
     listitems={[
-      <p>
-        Collaborating with other designers and developers to create{" "}
-        <a
-          href="https://linktr.ee/soli2023"
-          className="text-[#473931] font-semibold"
-        >
-          Soli
-        </a>
-        , an application that empowers young adults to explore their area solo
-        by guides posted by other users
-      </p>,
-      "Developing numerous web applications using the Ruby on Rails framework",
+      "Augmenting user experience in both Azure Data Factory and Fabric Data Factory by completing an intern project with Copilot integration.",
+      "Expanding current UX features and fixing bugs in both products.",
     ]}
-    logo="bg-[url('../public/viget.png')]"
-    date="2023 - Present"
+    logo="bg-[url('../public/msft.png')]"
+    date="2024 - Present"
   />,
   <ExperienceCard
     company="Hack4Impact"
     companyLink="https://uiuc.hack4impact.org/"
     title="Software Developer"
     listitems={[
+      <p>
+        Collaborated to build Kind Space, a web platform for
+        <a
+          href="https://www.fosternation.org/"
+          className="text-[#473931] font-semibold"
+        >
+          {" "}
+          Foster Nation{" "}
+        </a>
+        that allows foster youth to request gifts.
+      </p>,
+      <p>
+        Streamlined{" "}
+        <a
+          href="https://www.ethicsnet.org/"
+          className="text-[#473931] font-semibold"
+        >
+          {" "}
+          EthicsNet's
+        </a>{" "}
+        personalization and annotation suites, enabling users to generate AI
+        tokens that better match their morals
+      </p>,
       <p>
         Co-developed a web application for
         <a
@@ -61,19 +76,41 @@ const items = [
         </a>
         , allowing users to forecast their total solar power output
       </p>,
-      <p>
-        Collaborated to build a virtual apprenticeship platform for{" "}
-        <a
-          href="https://www.kadakareer.com/"
-          className="text-[#473931] font-semibold"
-        >
-          KadaKareer
-        </a>
-        , a non-profit helping Filipino students
-      </p>,
     ]}
     logo="bg-[url('../public/h4i.png')]"
     date="2022 - Present"
+  />,
+  <ExperienceCard
+    company="SWE Illinois"
+    companyLink="https://www.societyofwomenengineers.illinois.edu/"
+    title="Team Tech Co-Director"
+    listitems={[
+      "Leading a team of 15 women engineers to develop an Foreign Object Detection System, involving app development, computer vision, and sensors, for John Deere",
+      "Will be presenting this project at the WE24 conference October 2024",
+    ]}
+    logo="bg-[url('../public/swe.png')]"
+    date="2023 - Present"
+  />,
+  <ExperienceCard
+    company="Viget"
+    companyLink="https://www.viget.com/"
+    title="Application Developer Intern"
+    listitems={[
+      <p>
+        Collaborated with other designers and developers to create{" "}
+        <a
+          href="https://linktr.ee/soli2023"
+          className="text-[#473931] font-semibold"
+        >
+          Soli
+        </a>
+        , an application that empowers young adults to explore their area solo
+        by guides posted by other users
+      </p>,
+      "Developed numerous web applications using the Ruby on Rails framework",
+    ]}
+    logo="bg-[url('../public/viget.png')]"
+    date="2023"
   />,
   <ExperienceCard
     company="Blue Cloak"
@@ -163,14 +200,14 @@ export default function App() {
                   <p className="mb-5 mt-8 font-Poppins text-base text-[#473931]/[0.6]">
                     I am studying Computer Science at UIUC and love to develop
                     innovative and impactful applications. I'm mainly interested
-                    in AI/ML and full-stack development. <br />
+                    in full-stack development and AI/ML. <br />
                     <br />
-                    Currently, I am an Application Developer intern at{" "}
+                    Currently, I am an Software Engineer intern at{" "}
                     <a
-                      href="https://viget.com/"
+                      href="https://azure.microsoft.com/en-us/products/data-factory"
                       className="text-[#473931] font-semibold"
                     >
-                      Viget
+                      Microsoft
                     </a>{" "}
                     and am writing software at{" "}
                     <a
@@ -191,14 +228,17 @@ export default function App() {
                     aparekh6@illinois.edu
                   </a>
                   <a
+                    aria-label="LinkedIn"
                     href="https://www.linkedin.com/in/anya-parekh/"
                     className="mt-10 w-[24px] h-[24px] absolute bottom-10 right-[12px] bg-[url('../public/linkedin.svg')]"
                   />
                   <a
+                    aria-label="Github"
                     href="https://github.com/anyaparekh/"
                     className="mt-10 w-[24px] h-[24px] absolute bottom-10 right-[52px] bg-[url('../public/github.svg')]"
                   />
                   <a
+                    aria-label="Resume"
                     href="Anya_Parekh_Resume.pdf"
                     download="Anya_Parekh_Resume"
                     target="_blank"
@@ -233,6 +273,20 @@ export default function App() {
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 px-5 mb-6">
               <ProjectCard
+                picture={fosternation}
+                title="Kind Space"
+                logo="bg-[url('../public/link.svg')]"
+                link="https://foster-nation-client.vercel.app/"
+                skills={["Stripe", "AWS", "React", "MongoDB"]}
+              />
+              <ProjectCard
+                picture={ethicsnet}
+                title="EthicsNet"
+                logo="bg-[url('../public/github2.svg')]"
+                link="https://github.com/lecode-dev/ethicsnet-frontend-v2"
+                skills={["React", "TypeScript", "MongoDB"]}
+              />
+              <ProjectCard
                 picture={soli}
                 title="Soli"
                 logo="bg-[url('../public/github2.svg')]"
@@ -240,18 +294,18 @@ export default function App() {
                 skills={["Ruby on Rails", "Ruby", "Postgres"]}
               />
               <ProjectCard
-                picture={timely}
-                title="Timely"
-                logo="bg-[url('../public/link.svg')]"
-                link="https://meettimely.com"
-                skills={["React Native", "Firebase", "Expo Go"]}
-              />
-              <ProjectCard
                 picture={ocf}
                 title="Open Climate Fix"
                 logo="bg-[url('../public/github2.svg')]"
                 link="https://github.com/openclimatefix/pv-sites-mobile"
                 skills={["NextJS", "TypeScript", "Auth0"]}
+              />
+              <ProjectCard
+                picture={timely}
+                title="Timely"
+                logo="bg-[url('../public/link.svg')]"
+                link="https://meettimely.com"
+                skills={["React Native", "Firebase", "Expo Go"]}
               />
               <ProjectCard
                 picture={kada}
