@@ -1,4 +1,5 @@
 import headshot from "./headshot.png";
+import dyslexico from "./projects/dyslexico.png";
 import fosternation from "./projects/fosternation.png";
 import ethicsnet from "./projects/ethicsnet.png";
 import soli from "./projects/soli.png";
@@ -31,17 +32,29 @@ const items = [
     companyLink="https://azure.microsoft.com/en-us/products/data-factory"
     title="Software Engineer Intern"
     listitems={[
-      "Augmenting user experience in both Azure Data Factory and Fabric Data Factory by completing an intern project with Copilot integration.",
-      "Expanding current UX features and fixing bugs in both products.",
+      "Leading an inter-team project to create a code generation Copilot skill to create data pipeline code for Airflow jobs in Fabric Data Factory.",
+      "Taking on additional responsiblity by expanding current Data Factory UX features along with identifying and fixing product-wide bugs.",
+      "Augmented user experience in Fabric Data Factory by creating a new Copilot skill for generating summary and performance tips for Copy Data activities.",
     ]}
     logo="bg-[url('../public/msft.png')]"
-    date="2024 - Present"
+    date="2025 - Present, 2024"
   />,
   <ExperienceCard
     company="Hack4Impact"
     companyLink="https://uiuc.hack4impact.org/"
-    title="Software Developer"
+    title="Tech Lead, Software Developer"
     listitems={[
+      <p>
+        Directed a team of 5 developers to build a mobile application for
+        <a
+          href="https://www.dyslexi.co/"
+          className="text-[#473931] font-semibold"
+        >
+          {" "}
+          Dyslexico{" "}
+        </a>
+        that allows dyslexic users to better correct their writing.
+      </p>,
       <p>
         Collaborated to build Kind Space, a web platform for
         <a
@@ -63,7 +76,7 @@ const items = [
           EthicsNet's
         </a>{" "}
         personalization and annotation suites, enabling users to generate AI
-        tokens that better match their morals
+        tokens that better match their morals.
       </p>,
       <p>
         Co-developed a web application for
@@ -74,22 +87,22 @@ const items = [
           {" "}
           Open Climate Fix
         </a>
-        , allowing users to forecast their total solar power output
+        , allowing users to forecast their total solar power output.
       </p>,
     ]}
     logo="bg-[url('../public/h4i.png')]"
-    date="2022 - Present"
+    date="2022 - 2025"
   />,
   <ExperienceCard
     company="SWE Illinois"
     companyLink="https://www.societyofwomenengineers.illinois.edu/"
     title="Team Tech Co-Director"
     listitems={[
-      "Leading a team of 15 women engineers to develop an Foreign Object Detection System, involving app development, computer vision, and sensors, for John Deere",
-      "Will be presenting this project at the WE24 conference October 2024",
+      "Led a team of 15 women engineers to develop an Foreign Object Detection System, involving app development, computer vision, and sensors, for John Deere.",
+      "Prepared to present this project at the WE24 conference October 2024.",
     ]}
     logo="bg-[url('../public/swe.png')]"
-    date="2023 - Present"
+    date="2023 - 2024"
   />,
   <ExperienceCard
     company="Viget"
@@ -105,7 +118,7 @@ const items = [
           Soli
         </a>
         , an application that empowers young adults to explore their area solo
-        by guides posted by other users
+        by guides posted by other users.
       </p>,
       "Developed numerous web applications using the Ruby on Rails framework",
     ]}
@@ -117,9 +130,9 @@ const items = [
     companyLink="https://www.blue-cloak.com/"
     title="Software Developer Intern"
     listitems={[
-      "Co-developed a cyber range orchestration platform that enables cyber training exercises and hosts virtual networks",
-      "Expanded the map editor to better visualize network infrastructures",
-      "Created unit and validation test scripts using Python to test and debug each platform component",
+      "Co-developed a cyber range orchestration platform that enables cyber training exercises and hosts virtual networks.",
+      "Expanded the map editor to better visualize network infrastructures.",
+      "Created unit and validation test scripts using Python to test and debug each platform component.",
     ]}
     logo="bg-[url('../public/blue-cloak.png')]"
     date="2019, 2021"
@@ -140,7 +153,7 @@ const items = [
       </p>,
       <p>
         Worked with Professor Gheorghe Tecuci to develop analyses for
-        sInvestigator, an AI based cognitive assistant
+        sInvestigator, an AI based cognitive assistant.
       </p>,
       <p>
         Work published in the GMU's 2020{" "}
@@ -150,7 +163,7 @@ const items = [
         >
           “Teaching Towards the Future”{" "}
         </a>
-        journal
+        journal.
       </p>,
     ]}
     logo="bg-[url('../public/gmu.png')]"
@@ -200,7 +213,7 @@ export default function App() {
                   <p className="mb-5 mt-8 font-Poppins text-base text-[#473931]/[0.6]">
                     I am studying Computer Science at UIUC and love to develop
                     innovative and impactful applications. I'm mainly interested
-                    in full-stack development and AI/ML. <br />
+                    in full-stack development, NLP, and ML. <br />
                     <br />
                     Currently, I am an Software Engineer intern at{" "}
                     <a
@@ -209,14 +222,7 @@ export default function App() {
                     >
                       Microsoft
                     </a>{" "}
-                    and am writing software at{" "}
-                    <a
-                      href="https://uiuc.hack4impact.org/"
-                      className="text-[#473931] font-semibold"
-                    >
-                      Hack4Impact
-                    </a>
-                    .
+                    and am writing software in my free time.
                   </p>
                 </div>
                 <div className="md:ml-16 ml-8 mb-10 flex-1">
@@ -272,6 +278,13 @@ export default function App() {
               Projects
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 px-5 mb-6">
+              <ProjectCard
+                picture={dyslexico}
+                title="Dyslexico"
+                logo="bg-[url('../public/link.svg')]"
+                link="https://dyslexi.co/"
+                skills={["React Native", "TypeScript", "Expo"]}
+              />
               <ProjectCard
                 picture={fosternation}
                 title="Kind Space"

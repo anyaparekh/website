@@ -20,7 +20,7 @@ const ExperienceCard: FC<Props> = ({
   return (
     <div className="h-[430px] border-4 border-[#E9D5CE] mx-2 rounded-2xl">
       <div className="flex h-[130px] bg-[#E9D5CE]">
-        <a href={companyLink}>
+        <a style={{ cursor: "pointer" }} href={companyLink}>
           <div className={`flex-2 mt-5 ml-3 w-[70px] h-[67px] ${logo}`} />
         </a>
         <div className="flex flex-1 flex-col ml-4">
@@ -34,11 +34,29 @@ const ExperienceCard: FC<Props> = ({
           <p className="flex-1 mb-3 text-[#977A71] text-sm">{date}</p>
         </div>
       </div>
-      <ol className="ml-14 list-disc space-y-4 mt-6 text-[#977A71] pr-8  text-[15px]">
-        {listitems.map((value, i) => (
-          <li key={i}>{value}</li>
-        ))}
-      </ol>
+      <div className="max-h-64 overflow-auto">
+        <style>
+          {`
+            div::-webkit-scrollbar {
+              width: 8px;
+            }
+
+            div::-webkit-scrollbar-track {
+              background: transparent;
+            }
+
+            div::-webkit-scrollbar-thumb {
+              background-color: rgba(0, 0, 0, 0.4);
+              border-radius: 4px;
+            }
+          `}
+        </style>
+        <ol className="ml-10 list-disc space-y-4 mt-6 text-[#977A71] pr-8 text-[15px]">
+          {listitems.map((value, i) => (
+            <li key={i}>{value}</li>
+          ))}
+        </ol>
+      </div>
     </div>
   );
 };
