@@ -32,12 +32,12 @@ const items = [
     companyLink="https://azure.microsoft.com/en-us/products/data-factory"
     title="Software Engineer Intern"
     listitems={[
-      "Leading an inter-team project to create a code generation Copilot skill to create data pipeline code for Airflow jobs in Fabric Data Factory.",
-      "Taking on additional responsiblity by expanding current Data Factory UX features along with identifying and fixing product-wide bugs.",
+      "Led an inter-team project to create a code generation Copilot skill to create data pipeline code for Airflow jobs in Fabric Data Factory.",
+      "Took on additional responsibility by expanding current Data Factory UX features along with identifying and fixing product-wide bugs.",
       "Augmented user experience in Fabric Data Factory by creating a new Copilot skill for generating summary and performance tips for Copy Data activities.",
     ]}
     logo="bg-[url('../public/msft.png')]"
-    date="2025 - Present, 2024"
+    date="2025, 2024"
   />,
   <ExperienceCard
     company="Hack4Impact"
@@ -213,16 +213,8 @@ export default function App() {
                   <p className="mb-5 mt-8 font-Poppins text-base text-[#473931]/[0.6]">
                     I am studying Computer Science at UIUC and love to develop
                     innovative and impactful applications. I'm mainly interested
-                    in full-stack development, NLP, and ML. <br />
-                    <br />
-                    Currently, I am an Software Engineer intern at{" "}
-                    <a
-                      href="https://azure.microsoft.com/en-us/products/data-factory"
-                      className="text-[#473931] font-semibold"
-                    >
-                      Microsoft
-                    </a>{" "}
-                    and am writing software in my free time.
+                    in full-stack development, NLP, and ML, and am writing
+                    software in my free time.
                   </p>
                 </div>
                 <div className="md:ml-16 ml-8 mb-10 flex-1">
